@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, 
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'Space Mono', monospace;
+  src: url(./assets/fonts/SpaceMono-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}

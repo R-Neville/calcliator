@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #F2C8C3;
+
+  h1 {
+    color: #5F0D04;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 0.5em 1em;
+      border-bottom: 2px solid #5F0D04;
+      color: #5F0D04;
+    
+      &:hover {
+        background-color: #5F0D04;
+        color: #F2C8C3;
+      }
+    }
+  }
+}
