@@ -35,8 +35,6 @@ describe('Multiplication', () => {
     const resultText = await homePage.getResultText();
 
     expect(parseInt(resultText)).toBe(op1 * op2);
-
-    homePage.clear();
   });
 
   it('should display the correct result with 3 operands', async () => {
@@ -57,7 +55,5 @@ describe('Multiplication', () => {
     const resultText = await homePage.getResultText();
 
     expect(parseInt(resultText)).toBe(op1 * op2 * op3);
-
-    homePage.clear();
   });
 });

@@ -19,8 +19,6 @@ describe('Subtraction', () => {
 
     const resultText = await homePage.getResultText();
     expect(resultText).toBe('0');
-
-    homePage.clear();
   });
 
   it('should display the correct result with two operands', async () => {
@@ -37,8 +35,6 @@ describe('Subtraction', () => {
     const resultText = await homePage.getResultText();
 
     expect(parseInt(resultText)).toBe(op1 - op2);
-
-    homePage.clear();
   });
 
   it('should display the correct result with 3 operands', async () => {
@@ -59,7 +55,5 @@ describe('Subtraction', () => {
     const resultText = await homePage.getResultText();
 
     expect(parseInt(resultText)).toBe(op1 - op2 - op3);
-
-    homePage.clear();
   });
 });
