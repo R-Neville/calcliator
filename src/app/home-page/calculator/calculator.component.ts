@@ -29,6 +29,11 @@ export class CalculatorComponent {
   }
 
   compute(): void {
-    this.results.unshift(this.math.evaluate(this.calcString));
+    try {
+      const result = this.math.evaluate(this.calcString);
+      this.results.unshift(result);
+    } catch {
+      alert("Invalid arithmetic expression");
+    }
   }
 }
