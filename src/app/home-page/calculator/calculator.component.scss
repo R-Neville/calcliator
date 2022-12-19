@@ -48,6 +48,11 @@
       color: #D5D8DC;
       cursor: pointer;
 
+      &.eval {
+        background-color: #D5D8DC;
+        color: #1C2833;
+      }
+
       &.clr {
         background-color: #E6B0AA;
         color: #1C2833;
