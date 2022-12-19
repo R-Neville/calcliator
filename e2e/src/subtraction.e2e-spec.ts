@@ -1,4 +1,4 @@
-import { browser } from 'protractor';
+import getAlertTextAndDismiss from './utils/getAlertTextAndDismiss';
 import getHomePage from './utils/getHomePage';
 
 describe('Subtraction', () => {
@@ -12,10 +12,8 @@ describe('Subtraction', () => {
 
     await homePage.evaluate();
 
-    const alert = await browser.switchTo().alert();
-    const alertText = await alert.getText();
+    const alertText = await getAlertTextAndDismiss();
     expect(alertText).toBe('Invalid arithmetic expression');
-    alert.dismiss();
 
     const resultText = await homePage.getResultText();
     expect(resultText).toBe('0');
