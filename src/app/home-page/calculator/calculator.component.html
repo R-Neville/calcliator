@@ -1,30 +1,37 @@
-<div class="screen"></div>
+<div class="screen">
+  <div class="screen__calculation">
+    {{ tokens.join("") }}
+  </div>
+  <div class="screen__result">
+    {{ results[0] }}
+  </div>
+</div>
 <div class="controls">
   <div class="controls__row">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
+    <button (click)="tokens.push('1')">1</button>
+    <button (click)="tokens.push('2')">2</button>
+    <button (click)="tokens.push('3')">3</button>
   </div>
   <div class="controls__row">
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
+    <button (click)="tokens.push('4')">4</button>
+    <button (click)="tokens.push('5')">5</button>
+    <button (click)="tokens.push('6')">6</button>
   </div>
   <div class="controls__row">
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
+    <button (click)="tokens.push('7')">7</button>
+    <button (click)="tokens.push('8')">8</button>
+    <button (click)="tokens.push('9')">9</button>
   </div>
   <div class="controls__row">
-    <button>.</button>
-    <button>0</button>
+    <button (click)="tokens.push('.')">.</button>
+    <button (click)="tokens.push('0')">0</button>
     <button>=</button>
   </div>
   <div class="controls__row">
-    <button>+</button>
-    <button>-</button>
-    <button>*</button>
-    <button>/</button>
-    
+    <button (click)="tokens.push(' + ')">+</button>
+    <button (click)="tokens.push(' - ')">-</button>
+    <button (click)="tokens.push(' * ')">*</button>
+    <button (click)="tokens.push(' / ')">/</button>
   </div>
+  <button (click)="reset()">CLEAR</button>
 </div>

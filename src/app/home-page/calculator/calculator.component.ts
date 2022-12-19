@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent {
+  results: number[] = [0];
+  tokens: string[] = [];
 
+  reset(): void {
+    this.results = [0];
+    this.tokens = [];
+  }
 }

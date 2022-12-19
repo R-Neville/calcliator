@@ -8,7 +8,25 @@
 }
 
 .screen {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
   background-color: #9DBEB7;
+
+  &__calculation {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    color: #1C2833;
+  }
+
+  &__result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50%;
+    color: #1C2833;
+  }
 }
 
 .controls {
@@ -28,6 +46,17 @@
       background-color: #1C2833;
       font-size: 2em;
       color: #D5D8DC;
+      cursor: pointer;
     }
+  }
+
+  > button {
+    padding: 1em 0;
+    border: 2px solid #2C3E50;
+    border-radius: 5px;
+    background-color: #D5D8DC;
+    font-weight: bold;
+    color: #1C2833;
+    cursor: pointer;
   }
 }
