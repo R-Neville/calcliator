@@ -10,3 +10,24 @@
 .screen {
   background-color: #9DBEB7;
 }
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+
+  &__row {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+
+    button {
+      flex-grow: 1;
+      border: 2px solid #2C3E50;
+      border-radius: 5px;
+      background-color: #1C2833;
+      font-size: 2em;
+      color: #D5D8DC;
+    }
+  }
+}
