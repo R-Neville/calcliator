@@ -36,6 +36,9 @@
   <div class="controls__row">
     <button (click)="tokens.push('(')">(</button>
     <button (click)="tokens.push(')')">)</button>
-    <button (click)="reset()">CLR</button>
+  </div>
+  <div class="controls__row">
+    <button class="clr" (click)="reset()">CLR</button>
+    <button class="del" (click)="undo()">DEL</button>
   </div>
 </div>

@@ -24,6 +24,10 @@ export class CalculatorComponent {
     this.tokens = [];
   }
 
+  undo(): void {
+    this.tokens.pop();
+  }
+
   compute(): void {
     this.results.unshift(this.math.evaluate(this.calcString));
   }

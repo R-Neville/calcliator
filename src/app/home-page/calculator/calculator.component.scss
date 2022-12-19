@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  grid-template-rows: 80px 300px;
+  grid-template-rows: 80px minmax(0, 1fr);
   padding: 1em;
   width: 100%;
   border-radius: 0.5em;
@@ -47,16 +47,16 @@
       font-size: 2em;
       color: #D5D8DC;
       cursor: pointer;
-    }
-  }
 
-  > button {
-    padding: 1em 0;
-    border: 2px solid #2C3E50;
-    border-radius: 5px;
-    background-color: #D5D8DC;
-    font-weight: bold;
-    color: #1C2833;
-    cursor: pointer;
+      &.clr {
+        background-color: #E6B0AA;
+        color: #1C2833;
+      }
+
+      &.del {
+        background-color: #F5CBA7;
+        color: #1C2833;
+      }
+    }
   }
 }
