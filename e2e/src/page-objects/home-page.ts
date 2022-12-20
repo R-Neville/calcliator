@@ -69,4 +69,13 @@ export default class HomePage extends Base {
   public async getResultText() {
     return await element(by.css('.screen__result')).getText();
   }
+
+
+/**
+ * Get the text displayed by the .screen__calculation div.
+ * @returns Promise<string>
+ */
+  public async getCalculationText() {
+    return await element(by.css('.screen__calculation')).getText();
+  }
 }
