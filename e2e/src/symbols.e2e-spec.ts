@@ -1,5 +1,5 @@
-import getHomePage from "./utils/getHomePage";
-import getAlertTextAndDismiss from "./utils/getAlertTextAndDismiss";
+import getHomePage from './utils/getHomePage';
+import getAlertTextAndDismiss from './utils/getAlertTextAndDismiss';
 
 describe('Symbols', () => {
   describe('+', () => {
@@ -8,10 +8,10 @@ describe('Symbols', () => {
 
       await homePage.clickControlByText('+');
       await homePage.evaluate();
-      
+
       const alertText = await getAlertTextAndDismiss();
 
-      expect(alertText).toBe("Invalid arithmetic expression");
+      expect(alertText).toBe('Invalid arithmetic expression');
     });
   });
 
@@ -21,10 +21,10 @@ describe('Symbols', () => {
 
       await homePage.clickControlByText('-');
       await homePage.evaluate();
-      
+
       const alertText = await getAlertTextAndDismiss();
 
-      expect(alertText).toBe("Invalid arithmetic expression");
+      expect(alertText).toBe('Invalid arithmetic expression');
     });
   });
 
@@ -34,10 +34,10 @@ describe('Symbols', () => {
 
       await homePage.clickControlByText('*');
       await homePage.evaluate();
-      
+
       const alertText = await getAlertTextAndDismiss();
 
-      expect(alertText).toBe("Invalid arithmetic expression");
+      expect(alertText).toBe('Invalid arithmetic expression');
     });
   });
 
@@ -47,10 +47,49 @@ describe('Symbols', () => {
 
       await homePage.clickControlByText('/');
       await homePage.evaluate();
-      
+
       const alertText = await getAlertTextAndDismiss();
 
-      expect(alertText).toBe("Invalid arithmetic expression");
+      expect(alertText).toBe('Invalid arithmetic expression');
+    });
+  });
+
+  describe('.', () => {
+    it('should display error alert when no digits are provided before or after', async () => {
+      const homePage = getHomePage();
+
+      await homePage.clickControlByText('.');
+      await homePage.evaluate();
+
+      const alertText = await getAlertTextAndDismiss();
+
+      expect(alertText).toBe('Invalid arithmetic expression');
+    });
+  });
+
+  describe('(', () => {
+    it('should display error alert when no digits are provided before or after', async () => {
+      const homePage = getHomePage();
+
+      await homePage.clickControlByText('(');
+      await homePage.evaluate();
+
+      const alertText = await getAlertTextAndDismiss();
+
+      expect(alertText).toBe('Invalid arithmetic expression');
+    });
+  });
+
+  describe(')', () => {
+    it('should display error alert when no digits are provided before or after', async () => {
+      const homePage = getHomePage();
+
+      await homePage.clickControlByText(')');
+      await homePage.evaluate();
+
+      const alertText = await getAlertTextAndDismiss();
+
+      expect(alertText).toBe('Invalid arithmetic expression');
     });
   });
 });
