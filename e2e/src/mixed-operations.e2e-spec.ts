@@ -195,7 +195,7 @@ describe('Mixed operations', () => {
 
       const resultText = await homePage.getResultText();
 
-      expect(parseInt(resultText)).toBe(op1 * op2 / op3);
+      expect(parseFloat(resultText)).toBe(op1 * op2 / op3);
     });
   });
 
